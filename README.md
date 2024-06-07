@@ -33,7 +33,7 @@ Targets:
   solc      Build solidity source to abi.
   gogen     Automatic generation of go packages files.
   test      Automatic generation of go test files.
-  install   There is an install option specifically for Mac users.
+  bi        There is an install option specifically for MacOs brew users.
 ```
 
 ## Do you have any questions?
