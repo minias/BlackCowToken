@@ -8,7 +8,7 @@ help: Makefile
 	@echo 'blow the file required'	
 	@echo '	GNU Make v3.x / go v1.20.x / solc v0.8.18 / abigen v1.13.x '
 	@echo ''	
-	@echo 'If you use a maxos, you can install it as a brew. There is an option specifically for Mac users.'	
+	@echo 'If you use a MacOs, you can install it as a brew. There is an option specifically for MacOs users.'	
 	@echo ''
 	@echo 'Usage:'
 	@echo '  make [target]'

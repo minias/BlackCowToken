@@ -1,6 +1,6 @@
 # BlackCowToken
 
-Ethereum ERC20 BlackCowToken SmartContract
+Ethereum ERC20 BlackCowToken Smart Contract
 
 ## Preliminary requirement
 
@@ -21,7 +21,7 @@ make all
 blow the file required
 GNU Make v3.x / go v1.20.x / solc v0.8.18 / abigen v1.13.x
 
-If you use a maxos, you can install it as a brew. There is an option specifically for Mac users.
+If you use a macos, you can install it as a brew. There is an option specifically for Mac users.
 
 Usage:
   make [target]
@@ -38,8 +38,7 @@ Targets:
 
 ## Do you have any questions?
 
-- [Kakao Talk Go developer chat room
-](https://open.kakao.com/o/gd5mx3E)
+- [Kakao Talk Go developer chat room](https://open.kakao.com/o/gd5mx3E)
 
 ## License
 
