@@ -1,6 +1,6 @@
 PACKAGES=BlackCowToken
 
-.PHONY: help clean solc abigen test
+.PHONY: help clean solc abigen test bi
 
 #? help: Get more info on make commands.
 help: Makefile
@@ -18,7 +18,7 @@ help: Makefile
 
 #? clean: All remove makefile.
 clean:
-	rm -rf abi $(PACKAGES).go $(PACKAGES)_test.go
+	rm -rf abi $(PACKAGES).go $(PACKAGES)_test.go go.*
 
 #? all: Build abin && autogenerater go Pkg file.
 all: clean solc gogen test
@@ -29,15 +29,16 @@ solc:
 
 #? gogen: Automatic generation of go packages files.
 gogen:
-	go install github.com/ethereum/go-ethereum/cmd/abigen
 	abigen --abi "./abi/$(PACKAGES).abi" --pkg $(PACKAGES) --type $(PACKAGES) --out $(PACKAGES).go
 
 #? test: Automatic generation of go test files.
 test:
+	go mod init $(PACKAGES)
 	GO111MODULE=on go get -u github.com/cweill/gotests/...
 	gotests -all -w $(PACKAGES).go
+	go mod tidy
 	go test
 
-#? install: There is an install option specifically for Mac users.
-install:
+#? bi: There is an install option specifically for MacOs brew users.
+bi:
 	brew install make go sloc ethereum
